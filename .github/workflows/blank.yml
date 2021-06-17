@@ -36,5 +36,6 @@ jobs:
           host: 10.247.1.4
           username: github
           password: github
+          key: ${{ secrets.KEY }}
           port: 22
           script: whoami
