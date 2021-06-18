@@ -21,7 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     
     environment:
-            name: prod
+            name: 
+              Build
+              Release
+                         
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,4 +34,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
- 
+        
+      - name: Run a one-line script
+        run: echo Hello, world!  
+                                   
