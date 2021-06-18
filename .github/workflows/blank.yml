@@ -22,8 +22,11 @@ jobs:
     
     environment:
             name: 
-              Build
-              Release
+              prod
+          
+          
+             
+             
                          
     
     # Steps represent a sequence of tasks that will be executed as part of the job
