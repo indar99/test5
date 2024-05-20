@@ -1,0 +1,46 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-20.04'
+
+stages:
+- stage: 'Dev'
+  jobs:
+    - job: 
+      steps:
+       - task: Bash@3
+         inputs:
+          targetType: 'inline'
+          script: |
+            # Write your commands here
+          
+            echo 'Hello world Dev'
+
+- stage: 'Test'
+  jobs: 
+  - deployment: 
+    environment: 'Test'
+    strategy:
+     runOnce:
+       deploy:
+         steps:
+         - task: Bash@3
+           inputs:
+              targetType: 'inline'
+              script: |
+                echo 'Hello world Test' 
+
+- stage: 'Prod'
+  jobs: 
+  - deployment: 
+    environment: 'Prod'
+    strategy:
+     runOnce:
+       deploy:
+         steps:
+         - task: Bash@3
+           inputs:
+              targetType: 'inline'
+              script: |
+                echo 'Hello world Test'     
