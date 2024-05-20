@@ -43,4 +43,4 @@ stages:
            inputs:
               targetType: 'inline'
               script: |
-                echo 'Hello world Test'     
+                echo 'Hello world Prod'     
